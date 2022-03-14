@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 export default function Board(){
    
     const [squares , setSquares] = useState( Array(9).fill(null));
-    const [xIsNext ,setNext] = useState(true);
+    const [xIsNext , setNext] = useState(true);
 
     useEffect(() => {
         calculateWinner(squares);
@@ -16,12 +16,18 @@ export default function Board(){
     }
 
     function click(i){
-        const squares2 = squares.slice(squares[0]);
+      if(squares[i] == null){
+        const squares2 = squares.slice();  
         squares2[i] = xIsNext? "x":"o" ;
         console.log(i);
         setSquares(squares2);
         setNext(!xIsNext); 
-        calculateWinner(squares)
+      }
+    }
+
+    function reinicio(){
+        setSquares(Array(9).fill(null));
+        setNext(true);
     }
 
     function calculateWinner(squares) {
@@ -39,11 +45,9 @@ export default function Board(){
           const [a, b, c] = lines[i];
           if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
             alert("O ganhador é o: " + squares[a] + "\nClique em OK para iniciar um novo jogo");
-            setSquares(Array(9).fill(null));
-            setNext(true);
+            reinicio();
           }
         }
-        return null;
     }
 
     const status = 'Next player: ' + (xIsNext ? 'X' : 'O');
@@ -69,4 +73,6 @@ export default function Board(){
     </div>    
    )
 }
+
+
 
