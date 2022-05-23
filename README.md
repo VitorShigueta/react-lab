@@ -10,3 +10,7 @@ Lista de presença:
 Gerador de frases Naruto:
 
 ![Exemplo](./assets/naruto.PNG)
+
+Router Example:
+
+![Exemplo](./assets/Home.PNG)
