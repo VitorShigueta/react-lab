@@ -14,3 +14,11 @@ Gerador de frases Naruto:
 Router Example:
 
 ![Exemplo](./assets/Home.PNG)
+
+Redux counter:
+
+![Exemplo](./assets/init.PNG)
+
+Github interface:
+
+![Exemplo](./assets/project.PNG)
