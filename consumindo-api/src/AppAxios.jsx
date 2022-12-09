@@ -5,7 +5,7 @@ export function AppAxios(){
     const [repositories, setRepositories] = useState([]);
 
     useEffect(() => {
-        axios.get('https://api.github.com/users/diego3g/repos')
+        axios.get('https://api.github.com/users/VitorShigueta/repos')
         .then(response => {
             setRepositories(response.data);
         })
