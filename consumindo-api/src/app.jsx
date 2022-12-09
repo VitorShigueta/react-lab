@@ -4,7 +4,7 @@ export function App() {
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.github.com/users/diego3g/repos')
+    fetch('https://api.github.com/users/VitorShigueta/repos')
     .then(response => response.json())
     .then(data => {setRepositories(data);
     });
